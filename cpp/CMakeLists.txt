@@ -27,7 +27,6 @@ project(cppFem)
 add_subdirectory(fem)
 add_subdirectory(util)
 add_subdirectory(lib/eigen)
-add_subdirectory(lib/vtu11)
 
 find_package(Eigen3 3.4 REQUIRED NO_MODULE)
 
@@ -39,9 +38,7 @@ find_package(Eigen3 3.4 REQUIRED NO_MODULE)
 add_subdirectory(lib/pybind11)
 
 # Make pybind11 module (equivalent to add executable)
-pybind11_add_module(cppFem cmake_wrapper.cpp 
-                           util/writeVTU.cpp 
-                           util/writeVTU.h)
+pybind11_add_module(cppFem cmake_wrapper.cpp)
 
 # Link libraries to the executable
 target_link_libraries(cppFem PUBLIC Eigen3::Eigen vtu11 fem)
