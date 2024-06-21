@@ -1,0 +1,60 @@
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wshorten64to32 failed with the following output:
+Change Dir: /home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_18b69/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_18b69.dir/build.make CMakeFiles/cmTC_18b69.dir/build
+gmake[1]: Entering directory '/home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_18b69.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_SUPPORT_Wshorten64to32  -Wall -Wextra -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Werror   -Wshorten-64-to-32 -std=gnu++17 -o CMakeFiles/cmTC_18b69.dir/src.cxx.o -c /home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wshorten-64-to-32'
+gmake[1]: *** [CMakeFiles/cmTC_18b69.dir/build.make:78: CMakeFiles/cmTC_18b69.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_18b69/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wcpp11extensions failed with the following output:
+Change Dir: /home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5730c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5730c.dir/build.make CMakeFiles/cmTC_5730c.dir/build
+gmake[1]: Entering directory '/home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5730c.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_SUPPORT_Wcpp11extensions  -Wall -Wextra -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wenum-conversion -Werror   -Wc++11-extensions -std=gnu++17 -o CMakeFiles/cmTC_5730c.dir/src.cxx.o -c /home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wc++11-extensions'; did you mean '-fms-extensions'?
+gmake[1]: *** [CMakeFiles/cmTC_5730c.dir/build.make:78: CMakeFiles/cmTC_5730c.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_5730c/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_wd981 failed with the following output:
+Change Dir: /home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_87ffc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_87ffc.dir/build.make CMakeFiles/cmTC_87ffc.dir/build
+gmake[1]: Entering directory '/home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_87ffc.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_SUPPORT_wd981  -Wall -Wextra -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wenum-conversion -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -Werror   -wd981 -std=gnu++17 -o CMakeFiles/cmTC_87ffc.dir/src.cxx.o -c /home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-wd981'
+gmake[1]: *** [CMakeFiles/cmTC_87ffc.dir/build.make:78: CMakeFiles/cmTC_87ffc.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_87ffc/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_wd2304 failed with the following output:
+Change Dir: /home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0f957/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0f957.dir/build.make CMakeFiles/cmTC_0f957.dir/build
+gmake[1]: Entering directory '/home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0f957.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_SUPPORT_wd2304  -Wall -Wextra -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wenum-conversion -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -Werror   -wd2304 -std=gnu++17 -o CMakeFiles/cmTC_0f957.dir/src.cxx.o -c /home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-wd2304'
+gmake[1]: *** [CMakeFiles/cmTC_0f957.dir/build.make:78: CMakeFiles/cmTC_0f957.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_0f957/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }

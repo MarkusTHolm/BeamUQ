@@ -1,0 +1,1 @@
+g++ -I../../lib/eigen ../utilities.cpp  main.cpp -o main && ./main

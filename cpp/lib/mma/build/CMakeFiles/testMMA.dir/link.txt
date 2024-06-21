@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wall -Wextra -O3 CMakeFiles/testMMA.dir/tests/testMMA.cpp.o -o testMMA  -Wl,-rpath,/home/mtaho/Code/LatOpt/src/cpp/lib/mma/build/src:/usr/lib/x86_64-linux-gnu/openmpi/lib src/libmma.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so 
