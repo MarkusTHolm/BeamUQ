@@ -7,7 +7,6 @@ namespace py = pybind11;
 
 #include "fem/fem.h"
 #include "fem/recoverResults.h"
-#include "util/writeVTU.h"
 
 PYBIND11_MODULE(cppFem, m) 
 {

@@ -41,7 +41,7 @@ add_subdirectory(lib/pybind11)
 pybind11_add_module(cppFem cmake_wrapper.cpp)
 
 # Link libraries to the executable
-target_link_libraries(cppFem PUBLIC Eigen3::Eigen vtu11 fem)
+target_link_libraries(cppFem PUBLIC Eigen3::Eigen fem)
 
 ################################################################################
 # Install program (Not applicable)

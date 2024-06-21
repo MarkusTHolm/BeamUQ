@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp
+CMAKE_SOURCE_DIR = /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build
+CMAKE_BINARY_DIR = /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,7 +87,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Devel\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Devel\" \"Unspecified\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/CMakeFiles /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/CMakeFiles /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -187,6 +187,32 @@ fem/fast:
 	$(MAKE) $(MAKESILENT) -f fem/CMakeFiles/fem.dir/build.make fem/CMakeFiles/fem.dir/build
 .PHONY : fem/fast
 
+#=============================================================================
+# Target rules for targets named uninstall
+
+# Build rule for target.
+uninstall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
+.PHONY : uninstall
+
+# fast build rule for target.
+uninstall/fast:
+	$(MAKE) $(MAKESILENT) -f lib/eigen/CMakeFiles/uninstall.dir/build.make lib/eigen/CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
+
+#=============================================================================
+# Target rules for targets named demos
+
+# Build rule for target.
+demos: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demos
+.PHONY : demos
+
+# fast build rule for target.
+demos/fast:
+	$(MAKE) $(MAKESILENT) -f lib/eigen/demos/CMakeFiles/demos.dir/build.make lib/eigen/demos/CMakeFiles/demos.dir/build
+.PHONY : demos/fast
+
 cmake_wrapper.o: cmake_wrapper.cpp.o
 .PHONY : cmake_wrapper.o
 
@@ -211,30 +237,6 @@ cmake_wrapper.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppFem.dir/build.make CMakeFiles/cppFem.dir/cmake_wrapper.cpp.s
 .PHONY : cmake_wrapper.cpp.s
 
-util/writeVTU.o: util/writeVTU.cpp.o
-.PHONY : util/writeVTU.o
-
-# target to build an object file
-util/writeVTU.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppFem.dir/build.make CMakeFiles/cppFem.dir/util/writeVTU.cpp.o
-.PHONY : util/writeVTU.cpp.o
-
-util/writeVTU.i: util/writeVTU.cpp.i
-.PHONY : util/writeVTU.i
-
-# target to preprocess a source file
-util/writeVTU.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppFem.dir/build.make CMakeFiles/cppFem.dir/util/writeVTU.cpp.i
-.PHONY : util/writeVTU.cpp.i
-
-util/writeVTU.s: util/writeVTU.cpp.s
-.PHONY : util/writeVTU.s
-
-# target to generate assembly for a file
-util/writeVTU.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppFem.dir/build.make CMakeFiles/cppFem.dir/util/writeVTU.cpp.s
-.PHONY : util/writeVTU.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -247,14 +249,13 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... demos"
+	@echo "... uninstall"
 	@echo "... cppFem"
 	@echo "... fem"
 	@echo "... cmake_wrapper.o"
 	@echo "... cmake_wrapper.i"
 	@echo "... cmake_wrapper.s"
-	@echo "... util/writeVTU.o"
-	@echo "... util/writeVTU.i"
-	@echo "... util/writeVTU.s"
 .PHONY : help
 
 
