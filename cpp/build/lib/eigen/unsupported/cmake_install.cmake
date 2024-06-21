@@ -1,4 +1,4 @@
-# Install script for directory: /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/lib/eigen/unsupported
+# Install script for directory: /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/lib/eigen/unsupported
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,12 +39,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/mtaho/anaconda3/envs/fenicsproject/bin/x86_64-conda-linux-gnu-objdump")
+  set(CMAKE_OBJDUMP "/home/andfr/miniconda3/envs/fenics_cookie/bin/x86_64-conda-linux-gnu-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/eigen/unsupported/Eigen/cmake_install.cmake")
+  include("/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/lib/eigen/unsupported/Eigen/cmake_install.cmake")
 
 endif()
 

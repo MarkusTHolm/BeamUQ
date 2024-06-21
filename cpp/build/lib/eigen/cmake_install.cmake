@@ -1,4 +1,4 @@
-# Install script for directory: /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/lib/eigen
+# Install script for directory: /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/lib/eigen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,51 +39,20 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/mtaho/anaconda3/envs/fenicsproject/bin/x86_64-conda-linux-gnu-objdump")
+  set(CMAKE_OBJDUMP "/home/andfr/miniconda3/envs/fenics_cookie/bin/x86_64-conda-linux-gnu-objdump")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Devel" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/eigen3" TYPE FILE FILES "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/lib/eigen/signature_of_eigen3_matrix_library")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/eigen3" TYPE FILE FILES "/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/lib/eigen/signature_of_eigen3_matrix_library")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pkgconfig" TYPE FILE FILES "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/eigen/eigen3.pc")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Devel" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/eigen3" TYPE DIRECTORY FILES "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/lib/eigen/Eigen")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/eigen3/cmake/Eigen3Targets.cmake")
-    file(DIFFERENT _cmake_export_file_changed FILES
-         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/eigen3/cmake/Eigen3Targets.cmake"
-         "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/eigen/CMakeFiles/Export/7133a8d9e99559a5f47e78feaceaec8e/Eigen3Targets.cmake")
-    if(_cmake_export_file_changed)
-      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/eigen3/cmake/Eigen3Targets-*.cmake")
-      if(_cmake_old_config_files)
-        string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
-        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/eigen3/cmake/Eigen3Targets.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
-        unset(_cmake_old_config_files_text)
-        file(REMOVE ${_cmake_old_config_files})
-      endif()
-      unset(_cmake_old_config_files)
-    endif()
-    unset(_cmake_export_file_changed)
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/eigen3/cmake" TYPE FILE FILES "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/eigen/CMakeFiles/Export/7133a8d9e99559a5f47e78feaceaec8e/Eigen3Targets.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/eigen3/cmake" TYPE FILE FILES
-    "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/eigen/Eigen3Config.cmake"
-    "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/eigen/Eigen3ConfigVersion.cmake"
-    )
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/eigen3" TYPE DIRECTORY FILES "/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/lib/eigen/Eigen")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/eigen/unsupported/cmake_install.cmake")
+  include("/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/lib/eigen/unsupported/cmake_install.cmake")
 
 endif()
 

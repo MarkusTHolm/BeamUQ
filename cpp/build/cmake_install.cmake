@@ -1,4 +1,4 @@
-# Install script for directory: /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp
+# Install script for directory: /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,32 +39,32 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/mtaho/anaconda3/envs/fenicsproject/bin/x86_64-conda-linux-gnu-objdump")
+  set(CMAKE_OBJDUMP "/home/andfr/miniconda3/envs/fenics_cookie/bin/x86_64-conda-linux-gnu-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/fem/cmake_install.cmake")
+  include("/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/fem/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/util/cmake_install.cmake")
+  include("/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/util/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/eigen/cmake_install.cmake")
+  include("/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/lib/eigen/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/vtu11/cmake_install.cmake")
+  include("/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/lib/vtu11/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/pybind11/cmake_install.cmake")
+  include("/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/lib/pybind11/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -75,5 +75,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
