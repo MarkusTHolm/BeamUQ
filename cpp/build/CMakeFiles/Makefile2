@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp
+CMAKE_SOURCE_DIR = /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build
+CMAKE_BINARY_DIR = /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -112,73 +112,8 @@ lib/eigen/preinstall: lib/eigen/unsupported/preinstall
 .PHONY : lib/eigen/preinstall
 
 # Recursive "clean" directory target.
-lib/eigen/clean: lib/eigen/CMakeFiles/uninstall.dir/clean
-lib/eigen/clean: lib/eigen/blas/clean
-lib/eigen/clean: lib/eigen/lapack/clean
 lib/eigen/clean: lib/eigen/unsupported/clean
-lib/eigen/clean: lib/eigen/demos/clean
-lib/eigen/clean: lib/eigen/scripts/clean
 .PHONY : lib/eigen/clean
-
-#=============================================================================
-# Directory level rules for directory lib/eigen/blas
-
-# Recursive "all" directory target.
-lib/eigen/blas/all:
-.PHONY : lib/eigen/blas/all
-
-# Recursive "preinstall" directory target.
-lib/eigen/blas/preinstall:
-.PHONY : lib/eigen/blas/preinstall
-
-# Recursive "clean" directory target.
-lib/eigen/blas/clean:
-.PHONY : lib/eigen/blas/clean
-
-#=============================================================================
-# Directory level rules for directory lib/eigen/demos
-
-# Recursive "all" directory target.
-lib/eigen/demos/all:
-.PHONY : lib/eigen/demos/all
-
-# Recursive "preinstall" directory target.
-lib/eigen/demos/preinstall:
-.PHONY : lib/eigen/demos/preinstall
-
-# Recursive "clean" directory target.
-lib/eigen/demos/clean: lib/eigen/demos/CMakeFiles/demos.dir/clean
-.PHONY : lib/eigen/demos/clean
-
-#=============================================================================
-# Directory level rules for directory lib/eigen/lapack
-
-# Recursive "all" directory target.
-lib/eigen/lapack/all:
-.PHONY : lib/eigen/lapack/all
-
-# Recursive "preinstall" directory target.
-lib/eigen/lapack/preinstall:
-.PHONY : lib/eigen/lapack/preinstall
-
-# Recursive "clean" directory target.
-lib/eigen/lapack/clean:
-.PHONY : lib/eigen/lapack/clean
-
-#=============================================================================
-# Directory level rules for directory lib/eigen/scripts
-
-# Recursive "all" directory target.
-lib/eigen/scripts/all:
-.PHONY : lib/eigen/scripts/all
-
-# Recursive "preinstall" directory target.
-lib/eigen/scripts/preinstall:
-.PHONY : lib/eigen/scripts/preinstall
-
-# Recursive "clean" directory target.
-lib/eigen/scripts/clean:
-.PHONY : lib/eigen/scripts/clean
 
 #=============================================================================
 # Directory level rules for directory lib/eigen/unsupported
@@ -262,14 +197,14 @@ util/clean:
 CMakeFiles/cppFem.dir/all: fem/CMakeFiles/fem.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppFem.dir/build.make CMakeFiles/cppFem.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppFem.dir/build.make CMakeFiles/cppFem.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/CMakeFiles --progress-num=1,2 "Built target cppFem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/CMakeFiles --progress-num=1,2 "Built target cppFem"
 .PHONY : CMakeFiles/cppFem.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cppFem.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cppFem.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/CMakeFiles 0
 .PHONY : CMakeFiles/cppFem.dir/rule
 
 # Convenience name for target.
@@ -288,14 +223,14 @@ CMakeFiles/cppFem.dir/clean:
 fem/CMakeFiles/fem.dir/all:
 	$(MAKE) $(MAKESILENT) -f fem/CMakeFiles/fem.dir/build.make fem/CMakeFiles/fem.dir/depend
 	$(MAKE) $(MAKESILENT) -f fem/CMakeFiles/fem.dir/build.make fem/CMakeFiles/fem.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/CMakeFiles --progress-num=3,4,5,6 "Built target fem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/CMakeFiles --progress-num=3,4,5,6 "Built target fem"
 .PHONY : fem/CMakeFiles/fem.dir/all
 
 # Build rule for subdir invocation for target.
 fem/CMakeFiles/fem.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fem/CMakeFiles/fem.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/CMakeFiles 0
 .PHONY : fem/CMakeFiles/fem.dir/rule
 
 # Convenience name for target.
@@ -306,58 +241,6 @@ fem: fem/CMakeFiles/fem.dir/rule
 fem/CMakeFiles/fem.dir/clean:
 	$(MAKE) $(MAKESILENT) -f fem/CMakeFiles/fem.dir/build.make fem/CMakeFiles/fem.dir/clean
 .PHONY : fem/CMakeFiles/fem.dir/clean
-
-#=============================================================================
-# Target rules for target lib/eigen/CMakeFiles/uninstall.dir
-
-# All Build rule for target.
-lib/eigen/CMakeFiles/uninstall.dir/all:
-	$(MAKE) $(MAKESILENT) -f lib/eigen/CMakeFiles/uninstall.dir/build.make lib/eigen/CMakeFiles/uninstall.dir/depend
-	$(MAKE) $(MAKESILENT) -f lib/eigen/CMakeFiles/uninstall.dir/build.make lib/eigen/CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/CMakeFiles --progress-num= "Built target uninstall"
-.PHONY : lib/eigen/CMakeFiles/uninstall.dir/all
-
-# Build rule for subdir invocation for target.
-lib/eigen/CMakeFiles/uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/eigen/CMakeFiles/uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/CMakeFiles 0
-.PHONY : lib/eigen/CMakeFiles/uninstall.dir/rule
-
-# Convenience name for target.
-uninstall: lib/eigen/CMakeFiles/uninstall.dir/rule
-.PHONY : uninstall
-
-# clean rule for target.
-lib/eigen/CMakeFiles/uninstall.dir/clean:
-	$(MAKE) $(MAKESILENT) -f lib/eigen/CMakeFiles/uninstall.dir/build.make lib/eigen/CMakeFiles/uninstall.dir/clean
-.PHONY : lib/eigen/CMakeFiles/uninstall.dir/clean
-
-#=============================================================================
-# Target rules for target lib/eigen/demos/CMakeFiles/demos.dir
-
-# All Build rule for target.
-lib/eigen/demos/CMakeFiles/demos.dir/all:
-	$(MAKE) $(MAKESILENT) -f lib/eigen/demos/CMakeFiles/demos.dir/build.make lib/eigen/demos/CMakeFiles/demos.dir/depend
-	$(MAKE) $(MAKESILENT) -f lib/eigen/demos/CMakeFiles/demos.dir/build.make lib/eigen/demos/CMakeFiles/demos.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/CMakeFiles --progress-num= "Built target demos"
-.PHONY : lib/eigen/demos/CMakeFiles/demos.dir/all
-
-# Build rule for subdir invocation for target.
-lib/eigen/demos/CMakeFiles/demos.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/eigen/demos/CMakeFiles/demos.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/CMakeFiles 0
-.PHONY : lib/eigen/demos/CMakeFiles/demos.dir/rule
-
-# Convenience name for target.
-demos: lib/eigen/demos/CMakeFiles/demos.dir/rule
-.PHONY : demos
-
-# clean rule for target.
-lib/eigen/demos/CMakeFiles/demos.dir/clean:
-	$(MAKE) $(MAKESILENT) -f lib/eigen/demos/CMakeFiles/demos.dir/build.make lib/eigen/demos/CMakeFiles/demos.dir/clean
-.PHONY : lib/eigen/demos/CMakeFiles/demos.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
