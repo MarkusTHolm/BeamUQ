@@ -27,8 +27,8 @@ Fx = 3.0e9
 Fy = 1.5e7 
 
 class BeamModel1D:
-    def __init__(self, nelx, Lx):
-        self.Lx = Lx
+    def __init__(self, nelx, L):
+        self.L = L
 
         self.xMat, self.ixMat = self.create_mesh(nelx)
 
@@ -41,7 +41,7 @@ class BeamModel1D:
         ndof = nn*3
 
         self.fVec = np.zeros((ndof, 1))
-        self.fVec[-3] = Fx
+        # self.fVec[-3] = Fx
         self.fVec[-2] = Fy
        
     def forward(self, thkVec):
@@ -71,7 +71,7 @@ class BeamModel1D:
     def create_mesh(self, nelx):
         """ Create a line mesh (see example below)"""        
         """
-            nelx(=5), nx(=6), Lx
+            nelx(=5), nx(=6), L
         o-----o-----o-----o-----o-----o
 
         """
@@ -85,7 +85,7 @@ class BeamModel1D:
 
         # Define nodal coordinates
         node = 0
-        dx = self.Lx/nelx
+        dx = self.L/nelx
         for nx in range(0, nnx):
             xMat[node, 0] = nx*dx
             node += 1

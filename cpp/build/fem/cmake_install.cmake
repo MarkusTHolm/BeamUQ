@@ -1,4 +1,4 @@
-# Install script for directory: /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/fem
+# Install script for directory: /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/fem
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,6 +39,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/home/andfr/miniconda3/envs/fenics_cookie/bin/x86_64-conda-linux-gnu-objdump")
 endif()
 
