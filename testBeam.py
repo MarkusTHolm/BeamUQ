@@ -66,7 +66,7 @@ class BeamModel1D:
         cvxopt.cholmod.linsolve(K, B)
         u = np.array(B)[:, 0]
 
-        return u
+        return u[1::3]
 
     def create_mesh(self, nelx):
         """ Create a line mesh (see example below)"""        
