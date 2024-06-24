@@ -1,1 +1,3 @@
-./cpp/
+/cpp/lib
+/cpp/build
+/pycache

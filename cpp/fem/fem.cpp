@@ -63,7 +63,7 @@ Eigen::SparseMatrix<double>
 
     // Form global stiffness matrix from triplets
     kMat.setFromTriplets(tripletList.begin(), tripletList.end());  
-    // kMat.makeCompressed();      // Store in compressed column format       
+    kMat.makeCompressed();      // Store in compressed sparse column format       
 
     return kMat;
 };

@@ -1,4 +1,4 @@
-# Install script for directory: /home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/lib/eigen
+# Install script for directory: /home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/lib/eigen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,20 +39,47 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/andfr/miniconda3/envs/fenics_cookie/bin/x86_64-conda-linux-gnu-objdump")
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/eigen3" TYPE FILE FILES "/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/lib/eigen/signature_of_eigen3_matrix_library")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/eigen3" TYPE FILE FILES "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/lib/eigen/signature_of_eigen3_matrix_library")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pkgconfig" TYPE FILE FILES "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/eigen/eigen3.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/eigen3" TYPE DIRECTORY FILES "/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/lib/eigen/Eigen")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/eigen3" TYPE DIRECTORY FILES "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/lib/eigen/Eigen")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/eigen3/cmake/Eigen3Targets.cmake")
+    file(DIFFERENT EXPORT_FILE_CHANGED FILES
+         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/eigen3/cmake/Eigen3Targets.cmake"
+         "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/eigen/CMakeFiles/Export/share/eigen3/cmake/Eigen3Targets.cmake")
+    if(EXPORT_FILE_CHANGED)
+      file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/eigen3/cmake/Eigen3Targets-*.cmake")
+      if(OLD_CONFIG_FILES)
+        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/eigen3/cmake/Eigen3Targets.cmake\" will be replaced.  Removing files [${OLD_CONFIG_FILES}].")
+        file(REMOVE ${OLD_CONFIG_FILES})
+      endif()
+    endif()
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/eigen3/cmake" TYPE FILE FILES "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/eigen/CMakeFiles/Export/share/eigen3/cmake/Eigen3Targets.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/eigen3/cmake" TYPE FILE FILES
+    "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/eigen/Eigen3Config.cmake"
+    "/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/eigen/Eigen3ConfigVersion.cmake"
+    )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/andfr/A_course_exercises/beam_project/BeamUQ/cpp/build/lib/eigen/unsupported/cmake_install.cmake")
+  include("/home/mtaho/Code/Courses/UncertaintyQuantification/BeamUQ/cpp/build/lib/eigen/unsupported/cmake_install.cmake")
 
 endif()
 
