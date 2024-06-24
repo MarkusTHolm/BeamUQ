@@ -39,9 +39,11 @@ class BeamModel1D:
         ndof = nn*3
         self.fVec = np.zeros((ndof, ))
         # self.fVec[-3] = Fx
-        self.fVec[-2] = self.Fy
+        self.fVec[-2] = -self.Fy
        
-    def forward(self, thk):
+    def forward(self, Iz):
+
+        thk = (12*Iz/self.width)**(1/3)
 
         # Assemble stifness matrix
         kMat = cppFem.assemble_tangent_stiffness(self.xMat, self.ixMat, 
@@ -64,7 +66,7 @@ class BeamModel1D:
         # u = np.array(B)[:, 0]
         kMat = kMat.tocsc()
         u = sp.linalg.spsolve(kMat, self.fVec)
-        v = u[1::3]
+        v = u[3+1::3]
 
         return v
 
