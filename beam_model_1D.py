@@ -54,14 +54,6 @@ class BeamModel1D:
         kMat[dofs, dofs] = 1.0
 
         # Solve system
-        # kMat = 0.5 * (kMat.T + kMat)     # Enforce symmetry
-        # kMat = kMat.tocoo()
-        # K = cvxopt.spmatrix(kMat.data, 
-        #                     kMat.row.astype(np.int64), 
-        #                     kMat.col.astype(np.int64))
-        # B = cvxopt.matrix(self.fVec)
-        # cvxopt.cholmod.linsolve(K, B)
-        # u = np.array(B)[:, 0]
         kMat = kMat.tocsc()
         u = sp.linalg.spsolve(kMat, self.fVec)
         v = u[1::3]
@@ -112,5 +104,5 @@ class BeamModel1D:
 if __name__ == '__main__':
     nelx = 3
     beam = BeamModel1D(nelx=nelx, L=1.5)
-    v = beam.forward(thkVec=np.ones(nelx))
+    v = beam.forward(thk=np.ones(nelx))
     print(f"v = {v}")
