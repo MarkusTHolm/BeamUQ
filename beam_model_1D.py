@@ -37,9 +37,9 @@ class BeamModel1D:
         nel = np.shape(self.ixMat)[0]
         nn = np.shape(self.xMat)[0]
         ndof = nn*3
-        self.fVec = np.zeros((ndof, ))
+        self.fVec0 = np.zeros((ndof, ))
         # self.fVec[-3] = Fx
-        self.fVec[-2] = -self.Fy
+        self.fVec0[-2] = -self.Fy
        
     def forward(self, Iz):
 
@@ -48,6 +48,16 @@ class BeamModel1D:
         # Assemble stifness matrix
         kMat = cppFem.assemble_tangent_stiffness(self.xMat, self.ixMat, 
                                                  self.materialMat, thk)
+
+        # Prescribed displacement
+        delta = -5
+        p_dof = -2
+        self.fVec = self.fVec0 - kMat[:, p_dof].toarray().flatten()*delta
+        self.fVec[p_dof] = delta
+
+        kMat[p_dof, :] = 0.0
+        kMat[:, p_dof] = 0.0
+        kMat[p_dof, p_dof] = 1.0
 
         # Apply Dirichlet BC's
         dofs = [0, 1, 2] 
@@ -114,5 +124,5 @@ class BeamModel1D:
 if __name__ == '__main__':
     nelx = 3
     beam = BeamModel1D(nelx=nelx, L=1.5)
-    v = beam.forward(thkVec=np.ones(nelx))
+    v = beam.forward(Iz=np.ones(nelx))
     print(f"v = {v}")
